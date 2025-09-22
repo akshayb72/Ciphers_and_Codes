@@ -27,7 +27,8 @@ def caeser_cipher_encode(alpha_list):
     for letter in message:
         for index, value in enumerate(alpha_list):
             if letter in value:
-                encode += alpha_list[(index+shift)%len(alpha_list)]
+                shift_value = (index+shift)%len(alpha_list)
+                encode += alpha_list[shift_value]
     return encode
 
 def caeser_cipher_decode(alpha_list):
@@ -37,7 +38,8 @@ def caeser_cipher_decode(alpha_list):
     for letter in message:
         for index, value in enumerate(alpha_list):
             if letter in value:
-                decode += alpha_list[(index-shift) % len(alpha_list)]
+                shift_value = (index-shift) % len(alpha_list)
+                decode += alpha_list[shift_value]
     return decode
 
 main()
