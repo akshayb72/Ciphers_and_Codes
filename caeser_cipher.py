@@ -5,6 +5,7 @@ def main():
     'q','r','s','t','u','v','w','x',
     'y','z'
     ]
+    
     while True:
         option = int(input("1. Encode a String to Caeser Cipher\n2. Decode Caeser Cipher to a String\n3. Exit\n"))
         if option == 1:
